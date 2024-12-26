@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", serif;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+}
+
+.weather {
+    padding: 30px 0;
+    background: #0B131E;
+
+    &__wrapper {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__left {
+        padding: 30px 10px;
+        height: 650px;
+        background: #202B3B;
+        display: flex;
+        flex-direction: column;
+        border-radius: 24px;
+        text-align: center;
+        color: #9399a2;
+
+        div {
+            i {
+                margin-bottom: 50px;
+            }
+        }
+
+        span {
+            display: flex;
+            flex-direction: column;
+            margin-top: 25px;
+            gap: 10px;
+        }
+    }
+
+    &__center {
+        max-width: 600px;
+        width: 100%;
+    }
+
+    &__form {
+        display: flex;
+
+        button {
+            border-radius: 0 10px 10px 0;
+            padding: 0 5px;
+            background: #475263;
+            color: #FFF;
+
+        }
+    }
+
+    &__search {
+        width: 100%;
+        background: #202B3B;
+        border-radius: 10px 0 0 10px;
+        height: 40px;
+        text-indent: 10px;
+        color: #FFF;
+
+        &::placeholder {
+            color: #FFF;
+        }
+    }
+
+    &__main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding: 0 20px;
+        margin-bottom: 10px;
+    }
+
+    &__location {
+        font-size: 40px;
+        color: #FFF;
+    }
+
+    &__text {
+        color: #9399a2;
+        margin: 5px 0 30px;
+    }
+
+    &__main-temp {
+        font-size: 64px;
+        color: #FFF;
+    }
+
+    &__main-image {
+        img {
+            width: 120px;
+            height: 120px;
+        }
+    }
+
+
+    &__today-forcast {
+        background: #202B3B;
+        border-radius: 24px;
+        padding: 20px;
+        height: 195px;
+        overflow: auto;
+        &::-webkit-scrollbar{
+            width: 0;
+        }
+    }
+
+    &__today-wrapper {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    &__today-card {
+        text-align: center;
+        border-right: 1px solid #3F374B;
+
+        &:nth-child(6) {
+            border-right: 0;
+        }
+    }
+
+    &__forcast {
+        color: #9399a2;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    &__today-time {
+        color: #9399a2;
+    }
+
+    &__today-temp {
+        color: #FFF;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    &__full-info {
+        margin-top: 15px;
+        background: #202B3B;
+        border-radius: 24px;
+        padding: 20px 120px 20px 20px;
+    }
+
+    &__full-wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        .weather__mb {
+            margin-top: 20px;
+        }
+
+        span {
+            color: #9399a2;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        p {
+            color: #FFF;
+            margin-left: 25px;
+            margin-top: 8px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+
+    &__right {
+        max-width: 350px;
+        width: 100%;
+        background: #202B3B;
+        padding: 30px;
+        border-radius: 24px;
+        overflow: auto;
+        height: 665px;
+
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+    }
+
+    &__week-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        border-bottom: 1px solid #3F374B;
+
+        &:nth-child(7) {
+            border-bottom: none;
+        }
+
+        span:nth-child(1) {
+            color: #9399a2;
+        }
+
+        span:nth-child(2) {
+            display: flex;
+            align-items: center;
+            color: #FFF;
+        }
+
+        span:nth-child(3) {
+            color: #FFF;
+        }
+    }
+}
